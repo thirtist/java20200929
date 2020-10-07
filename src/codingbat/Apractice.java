@@ -2,60 +2,20 @@ package codingbat;
 
 public class Apractice {
 	
-	public boolean stringE(String str) {
+	public String frontBack(String str) {
 		  
-		  int v = 0;
-		  for (int i = 0; i < str.length(); i++ ){
-		      boolean z = str.charAt(i).equals("e");
-		      if (z) {
-		        v += 1;
-		      }
-		  };
+		  String final = "A";
 		  
-		  return v >= 1 && v <= 3;
-		  
-		}
-
-	public boolean stringE(String str) {
-		  
-		  int v = 0;
-		  for (int i = 0; i < str.length(); i++ ){
-		      char c = str.charAt(i);
-		      String s = String.valueOf(c);
-		      boolean z = s.equals("e");
-		      if (z) {
-		        v += 1;
-		      }
-		  };
-		  
-		  return v >= 1 && v <= 3;
-		  
-		}
-	
-	public boolean lastDigit(int a, int b) {
-		  
-		  return a % 10 == b % 10;
-		  
-		}
-	
-	public String endUp(String str) {
-		  
-		  if (str.length() > 2) {
-		  
-		    String A = str.substring(str.length()-3,str.length());
-		  
-		    String B = A.toUpperCase();
-		  
-		    String C = str.substring(0,str.length()-3) + B;
-		  
-		    return C;
+		  if(str.length()>2){
+		    String first = str.substring(0,1);
+		    String last = str.substring(str.length()-1,str.length());
+		    String middle = str.substring(1,str.length()-1);
+		    final = last + middle + first;
+		  } else{
+		    return str;
 		  }
-		  
-		  return str.toUpperCase();
-		  
+		  return final;
 		}
-
-
 
 	
 

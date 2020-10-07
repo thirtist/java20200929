@@ -7,9 +7,16 @@ public class Apractice {
 		System.out.println(a);
 	}
 
-	public boolean nearHundred(int n) {
+	  
+	public String startOz(String str) {
+		  boolean first = str.substring(0,1).equals("o");
+		  boolean second = str.substring(1,2).equals("z");
 		  
-		 return (Math.abs(100-n) <= 10) || (Math.abs(200-n) <= 10);
+		  if(first && second) {return str.substring(0,2);}
+		  else if (first) {return str.substring(0,1);}
+		  else (second) {return str.substring(1,2);};
+		  
+		  return false;
 		  
 		}
 
