@@ -21,8 +21,8 @@ public class Exercise07 {
 
 			if (numA == 1) {
 				System.out.print("예금액> ");
-				num = scanner.nextLine();
-				int moneyA = Integer.valueOf(num);
+				String moneyStr1 = scanner.nextLine();     //string을 새로만들어도 되긴하지만 아래 2번처럼 이미 있던 num을 재활용해도 되긴함
+				int moneyA = Integer.valueOf(moneyStr1);   
 				balance += moneyA;
 			}
 
@@ -34,13 +34,17 @@ public class Exercise07 {
 			}
 
 			if (numA == 3) {
-				System.out.print("잔고> ");
-				System.out.println(balance);
+//				System.out.print("잔고> ");
+//				System.out.println(balance);   // 이거 한꺼번에
+				System.out.print("잔고>" + balance);
 			}
 
 			if (numA == 4) {
-				break;
+				run = false; // break; 라도 써도됨
 			}
+			
+			// 같은지만 비교하는거면 switch(+case+break)문으로 하는게 간편
+			
 		}
 
 		System.out.println("프로그램 종료");
