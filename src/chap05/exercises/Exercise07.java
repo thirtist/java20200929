@@ -14,10 +14,6 @@ public class Exercise07 {
 				max = a;
 			}
 		}
-		
-		
-		
 		System.out.println("max:" + max);
 	}
-
 }
