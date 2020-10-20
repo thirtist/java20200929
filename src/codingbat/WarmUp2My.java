@@ -181,7 +181,61 @@ public class WarmUp2My {
 		  return result;
 		}
 
+	public String altPairs(String str) {
+		  String result = "";
+		  String b = "";
+		for (int i=0; i<str.length(); i=i+4){
+		  if(i<str.length()-1){ 			  //2.i는 여기서 자르는 문자열 인덱스를 말하므로
+		    b = str.substring(i+1,i+2);		  //  문자열길이보다 작으면 뒤를 하나 더 안자르게 만듦
+		  } else {
+		    b = "";							  //  해당안하면 b를 빈칸으로 초기화
+		  }
+		  result += str.substring(i,i+1)+b;   //1.일단 i를 4씩 증가시키면서 잘라서 넣음
+		}
+		  return result;
+		}
 
 
+	public String stringYak(String str) {
+		  return str.replace("yak", "");
+		}
+
+
+	public int array667(int[] nums) {
+		  
+		  int count = 0;
+		  for(int i = 0; i<nums.length-1; i++) {
+		    if (nums[i]==6 && (nums[i+1]==6 || nums[i+1]==7)){
+		      count++;
+		    }
+		  }
+		  
+		  return count;
+		}
+	
+	public boolean noTriples(int[] nums) {
+		  int count = 0;
+		  for (int i = 0; i<nums.length-2; i++){
+		    if (nums[i]==nums[i+1] && nums[i+1]==nums[i+2]){
+		      count++;
+		    }
+		  }
+		  return count==0;
+		}
+	
+	public boolean has271(int[] nums) {
+		  
+		  int count = 0;
+		  
+		  for (int i=0; i < nums.length-2; i++)
+		  
+		   if (nums[i+1]==nums[i]+5 && (Math.abs(nums[i+2]-nums[i]+1)<=2)){
+		     count++;
+		   } 
+		  return count !=0;
+		}
+
+
+	
 	
 }

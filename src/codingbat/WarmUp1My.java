@@ -167,6 +167,12 @@ public class WarmUp1My {
 		return "";
 
 	}
+	
+	public int intMax(int a, int b, int c) {
+		  int x = a > b ? a : b;
+		  return x > c ? x : c;
+		}
+
 
 	public int close10(int a, int b) {
 		int ten = Math.abs(10 - a) < Math.abs(10 - b) ? a : b;
@@ -179,6 +185,17 @@ public class WarmUp1My {
 		return 0;
 
 	}
+	//두번째로 푼거
+	public int close10(int a, int b) {
+		  int x = Math.abs(10-a);
+		  int y = Math.abs(10-b);
+		  
+		  if (x==y){
+		    return 0;
+		  }
+		  return x < y ? a : b;
+		}
+	
 
 	public boolean in3050(int a, int b) {
 		boolean w = a >= 30 && a <= 40;
@@ -213,6 +230,26 @@ public class WarmUp1My {
 
 		return 0;
 	}
+	
+	//두번째 풀었음 이게 더 나은듯
+	public int max1020(int a, int b) {
+		  boolean a1 = a>=10 && a<=20;
+		  boolean b1 = b>=10 && b<=20;
+		  
+		  if (!a1 && !b1) {
+		    return 0;
+		  } else if (a1 && b1 && a>b) {
+		    return a;
+		  } else if (a1 && a>b) {
+		    return a;
+		  } else if (!b1 && a<b) {
+		    return a;
+		  } else {
+		    return b;
+		  }
+		}
+
+	
 
 	public boolean stringE(String str) {
 
@@ -230,6 +267,20 @@ public class WarmUp1My {
 		return v >= 1 && v <= 3;
 
 	}
+	
+	//다시 해본거 이게 더 나은거 같음
+	public boolean stringE(String str) {
+		  
+		  int count = 0;
+		  for (int i = 0; i < str.length(); i++){
+		    if (str.charAt(i)=='e') {
+		      count++;
+		    }
+		  }
+		  return count>=1 && count<=3;
+		}
+
+	
 
 	public boolean lastDigit(int a, int b) {
 
@@ -253,6 +304,19 @@ public class WarmUp1My {
 		return str.toUpperCase();
 
 	}
+	
+	//두번째 한것
+	public String endUp(String str) {
+
+		 
+
+		 if (str.length()>2) {
+		    return str.substring(0,str.length()-3) + str.substring(str.length()-3,str.length()).toUpperCase();
+		 }
+		 
+		 return str.toUpperCase();
+		}
+
 
 	public String everyNth(String str, int n) {
 
@@ -266,5 +330,17 @@ public class WarmUp1My {
 		return result;
 
 	}
+	
+	//두번째 한것
+	public String everyNth(String str, int n) {
+		  
+		  String result = "";
+		  for(int i=0; i<str.length(); i=i+n) {
+		    result += str.substring(i,i+1);
+		  }
+		  return result;
+		}
+
+	
 
 }
