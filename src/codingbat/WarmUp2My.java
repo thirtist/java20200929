@@ -37,6 +37,13 @@ public class WarmUp2My {
 		return count;
 	}
 
+	
+	//두번째로 한거 - 이게 더 간결
+	boolean doubleX(String str) {
+		  int check = str.indexOf("x");
+		  return str.length()>check+1 && str.charAt(check+1)=='x';
+		}
+	
 	boolean doubleX(String str) {
 
 		if (str.indexOf("xx") != -1) {
@@ -49,6 +56,16 @@ public class WarmUp2My {
 		return true;
 	}
 
+	//새로한것
+	public String stringBits(String str) {
+		  String result = "";
+		  for (int i = 0; i<str.length(); i+=2){
+		    result += str.charAt(i);
+		  }
+		  return result;
+		}
+
+	
 	public String stringBits(String str) {
 
 		String result = "";

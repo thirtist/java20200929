@@ -1,4 +1,4 @@
-package chap11.textbook.s1111204;
+package chap11.textbook.s111204;
 
 public class ValueCompareExample {
 	public static void main(String[] args) {
