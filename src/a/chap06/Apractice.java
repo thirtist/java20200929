@@ -1,4 +1,4 @@
-package a.choap06;
+package a.chap06;
 
 public class Apractice {
 
