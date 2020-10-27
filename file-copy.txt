@@ -1,0 +1,31 @@
+package chap18.textbook.s180405;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+public class FileCopy {
+	public static void main(String[] args) throws Exception {
+		String src = "src/chap18/textbook/s180405/FileCopy.java";
+		String des = "file-copy.txt";
+		
+		File file = new File(des);              //이거로 해도됨
+		
+		FileReader fr = new FileReader(src);
+//		FileWriter fw = new FileWriter(des);
+		FileWriter fw = new FileWriter(file);   //이거로 해도됨
+		
+		int a;
+		char[] ch = new char[10];
+		
+		while ( (a = fr.read(ch)) != -1) {
+			fw.write(ch, 0, a);
+		}
+		
+		fr.close();
+		fw.flush();
+		fw.close();
+		
+		System.out.println("파일복사가 성공했나? 해치웠나?");
+	}
+}
