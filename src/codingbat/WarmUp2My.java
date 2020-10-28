@@ -75,6 +75,19 @@ public class WarmUp2My {
 		return result;
 	}
 
+	//다시푼것-더깔끔해짐
+	public String stringSplosion(String str) {
+		  
+		  String result = "";
+		  
+		  for(int i=str.length(); i>0;i--){
+		    result = str.substring(0,i) + result;
+		  }
+		  
+		  return result;
+		}
+
+	
 	public String stringSplosion(String str) {
 
 		String result = "";
@@ -85,6 +98,21 @@ public class WarmUp2My {
 		return result + str;
 	}
 
+//	다시한것
+	public int last2(String str) {
+		  
+		  int count = 0;
+		  
+		  for (int i =0; i< str.length()-2;i++){
+		    String last2 = str.substring(str.length()-2,str.length());
+		    if(str.substring(i,i+2).equals(last2)){
+		      count++;
+		    }
+		  }
+		  return count;
+		}
+
+	
 	public int last2(String str) {
 
 		int count = 0;
