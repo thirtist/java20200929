@@ -140,6 +140,34 @@ public class WarmUp2My {
 		return count;
 	}
 
+	//다시 푼 것 = 향상된포문 이제 사용쉬움
+	public int arrayCount9(int[] nums) {
+		  int count=0;
+		  for(int num : nums) {
+		    if(num==9) {
+		      count++;
+		    }
+		  }
+		  
+		  return count;
+		}
+
+	//다시 푼 것 비슷함
+	public boolean arrayFront9(int[] nums) {
+		  
+		  boolean result = false;
+		  for(int i=0; i<nums.length; i++) {
+		    if (i<4 && nums[i]==9) {
+		      result = true;
+		    }
+		  }
+		  
+		  return result;
+		}
+
+	
+	
+	
 	public boolean arrayFront9(int[] nums) {
 
 		int count = 0;
@@ -152,6 +180,21 @@ public class WarmUp2My {
 		return count != 0;
 	}
 
+	(예전에 했던거랑 완전 똑같음=boolean활용만 다름)
+	public boolean array123(int[] nums) {
+		  
+		  boolean result = false;
+		  
+		  for (int i = 0; i<nums.length-2; i++) {
+		    if (nums.length>2 && nums[i]==1 && nums[i+1]==2 && nums[i+2]==3) {
+		      result=true;
+		    }
+		  }
+		  
+		  return result;
+		}
+
+	
 	public boolean array123(int[] nums) {
 
 		int count = 0;
@@ -163,6 +206,29 @@ public class WarmUp2My {
 		return count != 0;
 	}
 
+	다시 풀었는데 이전에 풀었던게 더 잘풀었음
+	public int stringMatch(String a, String b) {
+		  
+		  int count =0;
+		  
+		  if(a.length() > b.length()){
+		    String temp = a;
+		    a=b;
+		    b=temp;
+		  }
+		  
+		  for (int i =0; i<a.length()-1; i++) {
+		    String A = a.substring(i,i+2);
+		    if (A.equals(b.substring(i,i+2))) {
+		      count++;
+		    }
+		      
+		  }
+		  return count;
+		  
+		}
+
+	
 	public int stringMatch(String a, String b) {
 
 		int c = 0;
@@ -178,6 +244,24 @@ public class WarmUp2My {
 		return count;
 	}
 
+
+	//다시한건데 좀 불안
+	public String stringX(String str) {
+		  
+		  String result = str.replace("x","");
+		  
+		  if (str.length()>1 && str.substring(0,1).equals("x") && str.substring(str.length()-1,str.length()).equals("x")){
+		    return "x"+result+"x";
+		  } else if (str.length()>0 && str.substring(0,1).equals("x")) {
+		    return "x"+result;
+		  } else if (str.length()>0 && str.substring(str.length()-1,str.length()).equals("x")) {
+		    return result+"x";
+		  }
+		  return result;
+		}
+
+	
+	
 	public String stringX(String str) {
 
 		String result = "";
